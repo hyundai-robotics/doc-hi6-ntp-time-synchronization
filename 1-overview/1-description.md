@@ -4,7 +4,7 @@ NTP(Network Time Protocol)는 네트워크의 모든 디바이스에서 시간�
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">그림 1.1 ${cont_model} 로봇제어기에서 NTP 시간 동기화</p></em>
+ <em><p align="center">그림 1.1 Hi6 로봇제어기에서 NTP 시간 동기화</p></em>
 </p>
 
 ---
