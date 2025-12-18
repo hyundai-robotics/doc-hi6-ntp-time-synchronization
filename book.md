@@ -1,4 +1,4 @@
-﻿# Hi6 로봇제어기 기능설명서 - NTP 클라이언트 시간 동기화
+﻿# ${cont_model} 로봇제어기 기능설명서 - NTP 클라이언트 시간 동기화
 
 {% hint style="warning" %}
 본 제품 설명서에서 제공되는 정보는 HD현대로보틱스의 자산입니다.
@@ -26,7 +26,7 @@ NTP(Network Time Protocol)는 네트워크의 모든 디바이스에서 시간�
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">그림 1.1 Hi6 로봇제어기에서 NTP 시간 동기화</p></em>
+ <em><p align="center">그림 1.1 ${cont_model} 로봇제어기에서 NTP 시간 동기화</p></em>
 </p>
 
 ---
@@ -35,13 +35,13 @@ NTP의 정의는 [RFC 5905: Network Time Protocol Version 4: Protocol and Algori
 
 # 1.2 요구사항
 
-NTP 클라이언트 시간 동기화 기능을 사용하기 위해서는 Hi6 로봇제어기와 LAN으로 직접 연결 가능한 NTP 서버가 필요합니다.
+NTP 클라이언트 시간 동기화 기능을 사용하기 위해서는 ${cont_model} 로봇제어기와 LAN으로 직접 연결 가능한 NTP 서버가 필요합니다.
 
 호스트 PC를 NTP 서버로 사용하기 위한 방법은 다음 장의 '[2. NTP 서버 설정](../2-ntp-server-setting/README.md)'을 참고하십시오.
 
 # 2. NTP 서버 설정
 
-Hi6 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사용하는 방법을 설명합니다.
+${cont_model} 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사용하는 방법을 설명합니다.
 
 # 2.1 윈도우 PC를 NTP 서버로 설정
 
