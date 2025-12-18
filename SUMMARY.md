@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hi6 Robot Controller Operation Manual - NTP client time synchronization](README.md)
+* [${cont_model} Robot Controller Operation Manual - NTP client time synchronization](README.md)
 * [1. Overview](1-overview/README.md)
     * [1.1 What is NTP time synchronization?](1-overview/1-description.md)
     * [1.2 Requirement](1-overview/2-requirement.md)

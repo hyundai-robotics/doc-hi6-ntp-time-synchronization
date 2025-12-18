@@ -1,9 +1,9 @@
-﻿# Hi6 Robot Controller Operation Manual - NTP time synchronization
+﻿# ${cont_model} Robot Controller Operation Manual - NTP time synchronization
 
 {% hint style="warning" %}
 The information presented in this manual is the property of HD Hyundai Robotics.
 
-The manual may neither be copied, in part or in full, nor redistributed without prior written consent from Hyundai Robotics.
+The manual may neither be copied, in part or in full, nor redistributed without prior written consent from HD Hyundai Robotics.
 
 It may neither be provided to any third party nor used for any other purposes.
 
@@ -28,7 +28,7 @@ NTP(Network Time Protocol) is a protocol used to synchronize time across all dev
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">Figure 1.1 NTP time synchronization on Hi6 robot controller</p></em>
+ <em><p align="center">Figure 1.1 NTP time synchronization on ${cont_model} robot controller</p></em>
 </p>
 
 ---
@@ -37,13 +37,13 @@ The definition of NTP can be found in [RFC 5905: Network Time Protocol Version 4
 
 # 1.2 Requirement
 
-To use the NTP client time synchronization feature, you need an NTP server that can be directly connected to the Hi6 robot controller by LAN.
+To use the NTP client time synchronization feature, you need an NTP server that can be directly connected to the ${cont_model} robot controller by LAN.
 
 For information on how to use your host PC as an NTP server, see '[2.NTP server setting](../2-ntp-server-setting/README.md)' in the next chapter.
 
 # 2. NTP server setting
 
-Describes how to use the host PC that connects to the Hi6 robot controller as an NTP server.
+Describes how to use the host PC that connects to the ${cont_model} robot controller as an NTP server.
 
 # 2.1 Set Windows PC as an NTP server
 

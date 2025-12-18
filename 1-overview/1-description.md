@@ -4,7 +4,7 @@ NTP(Network Time Protocol) is a protocol used to synchronize time across all dev
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">Figure 1.1 NTP time synchronization on Hi6 robot controller</p></em>
+ <em><p align="center">Figure 1.1 NTP time synchronization on ${cont_model} robot controller</p></em>
 </p>
 
 ---

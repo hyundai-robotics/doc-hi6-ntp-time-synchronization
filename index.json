@@ -6,42 +6,42 @@
 	},
 	{
 		"link": "1-overview/README.md",
-		"char_ofs": 538,
-		"byte_ofs": 558
+		"char_ofs": 551,
+		"byte_ofs": 571
 	},
 	{
 		"link": "1-overview/1-description.md",
-		"char_ofs": 651,
-		"byte_ofs": 677
+		"char_ofs": 664,
+		"byte_ofs": 690
 	},
 	{
 		"link": "1-overview/2-requirement.md",
-		"char_ofs": 1167,
-		"byte_ofs": 1206
+		"char_ofs": 1190,
+		"byte_ofs": 1229
 	},
 	{
 		"link": "2-ntp-server-setting/README.md",
-		"char_ofs": 1476,
-		"byte_ofs": 1521
+		"char_ofs": 1509,
+		"byte_ofs": 1554
 	},
 	{
 		"link": "2-ntp-server-setting/1-window-pc.md",
-		"char_ofs": 1595,
-		"byte_ofs": 1644
+		"char_ofs": 1638,
+		"byte_ofs": 1687
 	},
 	{
 		"link": "3-use-ntp-client/README.md",
-		"char_ofs": 4559,
-		"byte_ofs": 4674
+		"char_ofs": 4602,
+		"byte_ofs": 4717
 	},
 	{
 		"link": "3-use-ntp-client/1-setting.md",
-		"char_ofs": 4686,
-		"byte_ofs": 4805
+		"char_ofs": 4729,
+		"byte_ofs": 4848
 	},
 	{
 		"link": "3-use-ntp-client/2-execution.md",
-		"char_ofs": 7135,
-		"byte_ofs": 7330
+		"char_ofs": 7178,
+		"byte_ofs": 7373
 	}
 ]

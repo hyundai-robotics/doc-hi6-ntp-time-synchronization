@@ -1,9 +1,9 @@
-# Hi6 Robot Controller Operation Manual - NTP time synchronization
+# ${cont_model} Robot Controller Operation Manual - NTP time synchronization
 
 {% hint style="warning" %}
 The information presented in this manual is the property of HD Hyundai Robotics.
 
-The manual may neither be copied, in part or in full, nor redistributed without prior written consent from Hyundai Robotics.
+The manual may neither be copied, in part or in full, nor redistributed without prior written consent from HD Hyundai Robotics.
 
 It may neither be provided to any third party nor used for any other purposes.
 
