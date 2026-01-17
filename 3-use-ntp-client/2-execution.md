@@ -1,4 +1,4 @@
-# 3.2 Execute now
+﻿# 3.2 Execute now
 
 Touch the 'Execute now' button to perform NTP time synchronization.
 

@@ -1,4 +1,4 @@
-# 3.1 Setting
+﻿# 3.1 Setting
 
 1. Touch the menu \[system &gt; 2: Control parameters &gt; 9: Network &gt; 2: Service &gt; 3: NTP client\]
 

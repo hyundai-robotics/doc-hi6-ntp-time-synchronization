@@ -1,4 +1,4 @@
-# 1.1 What is NTP time synchronization?
+﻿# 1.1 What is NTP time synchronization?
 
 NTP(Network Time Protocol) is a protocol used to synchronize time across all devices in the network. By default, UDP port 123 is used.
 

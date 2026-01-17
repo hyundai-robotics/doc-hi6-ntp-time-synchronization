@@ -1,4 +1,4 @@
-{
+﻿{
     "langCode": "en",
     "series": "${cont_model} Controller",
     "title": "Function Manual - NTP Client",
@@ -8,5 +8,5 @@
     "docId": "${cont_model:upper}NTPTIMESYNC_EN_001",
     "references": [
         { "rpath" : "doc-hi6-operation/en-tp630" }
-    ]s
+    ]
 }

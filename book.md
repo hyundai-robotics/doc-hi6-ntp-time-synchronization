@@ -1,27 +1,16 @@
-﻿# ${cont_model} Robot Controller Operation Manual - NTP time synchronization
+﻿
+[__SOURCE](README.md)
+# ${cont_model} Controller Operation Manual - NTP time synchronization
 
-{% hint style="warning" %}
-The information presented in this manual is the property of HD Hyundai Robotics.
-
-The manual may neither be copied, in part or in full, nor redistributed without prior written consent from HD Hyundai Robotics.
-
-It may neither be provided to any third party nor used for any other purposes.
-
-
-
-HD Hyundai Robotics reserves the right to modify this document without prior notification.
-
-
-
-**Copyright ⓒ 2024 by HD Hyundai Robotics**
-{% endhint %}
-
+[__SOURCE](1-overview/README.md)
 # 1. Overview
 
 {% hint style="info" %}
 This feature is supported in V60.30-00 and later versions.
 {% endhint %}
 
+
+[__SOURCE](1-overview/1-description.md)
 # 1.1 What is NTP time synchronization?
 
 NTP(Network Time Protocol) is a protocol used to synchronize time across all devices in the network. By default, UDP port 123 is used.
@@ -35,16 +24,22 @@ NTP(Network Time Protocol) is a protocol used to synchronize time across all dev
 
 The definition of NTP can be found in [RFC 5905: Network Time Protocol Version 4: Protocol and Algorithm Specification](https://datatracker.ietf.org/doc/html/rfc5905).
 
+
+[__SOURCE](1-overview/2-requirement.md)
 # 1.2 Requirement
 
 To use the NTP client time synchronization feature, you need an NTP server that can be directly connected to the ${cont_model} robot controller by LAN.
 
 For information on how to use your host PC as an NTP server, see '[2.NTP server setting](../2-ntp-server-setting/README.md)' in the next chapter.
 
+
+[__SOURCE](2-ntp-server-setting/README.md)
 # 2. NTP server setting
 
 Describes how to use the host PC that connects to the ${cont_model} robot controller as an NTP server.
 
+
+[__SOURCE](2-ntp-server-setting/1-window-pc.md)
 # 2.1 Set Windows PC as an NTP server
 
 To use a Windows PC(Windows 10) as an NTP server, you must follow the steps below.
@@ -111,10 +106,14 @@ To use a Windows PC(Windows 10) as an NTP server, you must follow the steps belo
             </p>
         6. Finish
 
+
+[__SOURCE](3-use-ntp-client/README.md)
 # 3. Execute NTP time synchronization
 
 Describes how to set up NTP time synchronization in the Teach Pendant and Execute now.
 
+
+[__SOURCE](3-use-ntp-client/1-setting.md)
 # 3.1 Setting
 
 1. Touch the menu \[system &gt; 2: Control parameters &gt; 9: Network &gt; 2: Service &gt; 3: NTP client\]
@@ -191,6 +190,8 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
  </tbody>
 </table>
 
+
+[__SOURCE](3-use-ntp-client/2-execution.md)
 # 3.2 Execute now
 
 Touch the 'Execute now' button to perform NTP time synchronization.
