@@ -1,25 +1,16 @@
-﻿# ${cont_model} 로봇제어기 기능설명서 - NTP 클라이언트 시간 동기화
+﻿
+[__SOURCE](README.md)
+# ${cont_model} 제어기 기능설명서 - NTP 클라이언트 시간 동기화
 
-{% hint style="warning" %}
-본 제품 설명서에서 제공되는 정보는 HD현대로보틱스의 자산입니다.
-
-HD현대로보틱스의 서면에 의한 동의 없이 전부 또는 일부를 무단 전재 및 재배포할 수 없으며, 제3자에게 제공되거나 다른 목적에 사용할 수 없습니다.
-
-
-
-본 설명서는 사전 예고 없이 변경될 수 있습니다.
-
-
-
-**Copyright ⓒ 2024 by HD Hyundai Robotics**
-{% endhint %}
-
+[__SOURCE](1-overview/README.md)
 # 1. 개요
 
 {% hint style="info" %}
 이 기능은 V60.30-00 및 이후 버전부터 지원됩니다.
 {% endhint %}
 
+
+[__SOURCE](1-overview/1-description.md)
 # 1.1 NTP 시간 동기화란?
 
 NTP(Network Time Protocol)는 네트워크의 모든 디바이스에서 시간을 동기화하는 데 사용되는 프로토콜입니다. 기본적으로 UDP의 123번 포트를 사용합니다.
@@ -33,16 +24,22 @@ NTP(Network Time Protocol)는 네트워크의 모든 디바이스에서 시간�
 
 NTP의 정의는 [RFC 5905: Network Time Protocol Version 4: Protocol and Algorithm Specification](https://datatracker.ietf.org/doc/html/rfc5905)에서 확인할 수 있습니다.
 
+
+[__SOURCE](1-overview/2-requirement.md)
 # 1.2 요구사항
 
 NTP 클라이언트 시간 동기화 기능을 사용하기 위해서는 ${cont_model} 로봇제어기와 LAN으로 직접 연결 가능한 NTP 서버가 필요합니다.
 
 호스트 PC를 NTP 서버로 사용하기 위한 방법은 다음 장의 '[2. NTP 서버 설정](../2-ntp-server-setting/README.md)'을 참고하십시오.
 
+
+[__SOURCE](2-ntp-server-setting/README.md)
 # 2. NTP 서버 설정
 
 ${cont_model} 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사용하는 방법을 설명합니다.
 
+
+[__SOURCE](2-ntp-server-setting/1-window-pc.md)
 # 2.1 윈도우 PC를 NTP 서버로 설정
 
 윈도우 PC(Windows 10)를 NTP 서버로 사용하기 위해서는 아래의 단계를 수행해야 합니다.
@@ -109,10 +106,14 @@ ${cont_model} 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사�
             </p>
         6. 마침(F)
 
+
+[__SOURCE](3-use-ntp-client/README.md)
 # 3. NTP 시간 동기화 실행
 
 티치 펜던트에서 NTP 시간 동기화 설정 방법과 지금 실행에 대하여 설명합니다.
 
+
+[__SOURCE](3-use-ntp-client/1-setting.md)
 # 3.1 설정
 
 1. \[시스템 &gt; 2: 제어 파라미터 &gt; 9: 네트워크 &gt; 2: 서비스 &gt; 3: NTP 클라이언트\] 메뉴를 터치하십시오.
@@ -189,6 +190,8 @@ ${cont_model} 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사�
  </tbody>
 </table>
 
+
+[__SOURCE](3-use-ntp-client/2-execution.md)
 # 3.2 지금 실행
 
 '지금 실행' 버튼을 터치해 NTP 시간 동기화를 수행합니다.

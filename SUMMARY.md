@@ -1,6 +1,6 @@
-# Table of contents
+﻿# Table of contents
 
-* [${cont_model} 로봇제어기 기능설명서 - NTP 클라이언트 시간 동기화](README.md)
+* [${cont_model} 제어기 기능설명서 - NTP 클라이언트 시간 동기화](README.md)
 * [1. 개요](1-overview/README.md)
     * [1.1 NTP 시간 동기화란?](1-overview/1-description.md)
     * [1.2 요구사항](1-overview/2-requirement.md)
