@@ -1,7 +1,7 @@
 ﻿{
     "langCode": "en",
     "series": "${cont_model} Controller",
-    "title": "Function Manual - NTP Client",
+    "title": "Function Manual - NTP client time synchronization",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Table of Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",

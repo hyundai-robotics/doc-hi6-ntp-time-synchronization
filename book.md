@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} Controller Operation Manual - NTP time synchronization
+# ${cont_model} Controller Operation Manual - NTP client time synchronization
 
 [__SOURCE](1-overview/README.md)
 # 1. Overview
