@@ -1,1 +1,1 @@
-﻿# ${cont_model} Controller Operation Manual - NTP client time synchronization
+﻿# ${cont_model} Controller Function Manual - NTP client time synchronization
