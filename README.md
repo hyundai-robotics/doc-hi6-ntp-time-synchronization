@@ -1,1 +1,1 @@
-﻿# ${cont_model} Controller Function Manual - NTP client time synchronization
+﻿# ${cont_model} 控制器功能手册 - NTP 客户端时间同步

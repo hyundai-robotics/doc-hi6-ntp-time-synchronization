@@ -1,6 +1,5 @@
-﻿# 1. Overview
+﻿# 1. 概述
 
 {% hint style="info" %}
-This feature is supported in V60.30-00 and later versions.
+此功能在 V60.30-00 及更高版本中支持。
 {% endhint %}
-

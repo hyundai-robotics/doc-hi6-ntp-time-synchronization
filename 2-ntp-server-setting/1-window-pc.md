@@ -1,66 +1,65 @@
-﻿# 2.1 Set Windows PC as an NTP server
+﻿# 2.1 将 Windows PC 设置为 NTP 服务器
 
-To use a Windows PC(Windows 10) as an NTP server, you must follow the steps below.
+要将 Windows PC（Windows 10）用作 NTP 服务器，必须遵循以下步骤。
 
-1. Enable NTP server feature in Windows.
-    * Use w32time(Windows Time Service)
-    1. Open 'Registry Editor'
-    2. Go to the path 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config'
-        * Set the value of the 'AnnounceFlags' entry to 5(NTP server) - default may be 10
+1. 在 Windows 中启用 NTP 服务器功能。
+    * 使用 w32time（Windows 时间服务）
+    1. 打开“注册表编辑器”
+    2. 转到路径 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config'
+        * 将 'AnnounceFlags' 条目的值设置为 5（NTP 服务器） - 默认值可能是 10
         <p align="center">
          <img src="../_assets/reg-announceflags.png"></img>
-         <em><p align="center">Figure 2.1 NTP Server Setting(Registry Editor)</p></em>
+         <em><p align="center">图 2.1 NTP 服务器设置（注册表编辑器）</p></em>
         </p>
-    3. Go to the path 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer'
-        * Set the value of 'Enabled' entry to 1(enabled)
+    3. 转到路径 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer'
+        * 将 'Enabled' 条目的值设置为 1（启用）
         <p align="center">
          <img src="../_assets/reg-enabled.png"></img>
-         <em><p align="center">Figure 2.2 NTP Server Setting(Registry Editor)</p></em>
+         <em><p align="center">图 2.2 NTP 服务器设置（注册表编辑器）</p></em>
         </p>
-2. Restart the Windows Time service
-    * In 'Command Prompt', enter the following command with administrator privileges.
+2. 重启 Windows 时间服务
+    * 在“命令提示符”中，以管理员权限输入以下命令。
     ```
         net stop w32time
         net start w32time
     ```
-3. Windows Firewall setting
-    * NTP uses UDP port 123 by default. Therefore, the port must be open to act as an NTP server
-    1. Open 'Control Panel'
-    2. Select 'Windows Defender Firewall'
-    3. Select 'Advanced Settings'
-    4. Select 'Inbound Rules' in 'Windows Defender Firewall with Advanced Security'
+3. Windows 防火墙设置
+    * NTP 默认使用 UDP 端口 123。因此，该端口必须打开以充当 NTP 服务器
+    1. 打开“控制面板”
+    2. 选择“Windows Defender 防火墙”
+    3. 选择“高级设置”
+    4. 在“Windows Defender 防火墙与高级安全”中选择“入站规则”
         <p align="center">
          <img src="../_assets/defender.png"></img>
-         <em><p align="center">Figure 2.3 NTP Server Settings(Firewall)</p></em>
+         <em><p align="center">图 2.3 NTP 服务器设置（防火墙）</p></em>
         </p>
-    5. Select 'New Rule...'
-        * The 'New Inbound Rule Wizard' window opens
-        1. Rule Type: Port
+    5. 选择“新建规则...”
+        * “新建入站规则向导”窗口打开
+        1. 规则类型：端口
             <p align="center">
              <img src="../_assets/defender-setting-1.png"></img>
-             <em><p align="center">Figure 2.4 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.4 NTP 服务器设置（防火墙）</p></em>
             </p>
-        2. Protocol and Port
+        2. 协议和端口
             * UDP
-            * Specific local ports: 123
+            * 特定本地端口：123
             <p align="center">
              <img src="../_assets/defender-setting-2.png"></img>
-             <em><p align="center">Figure 2.5 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.5 NTP 服务器设置（防火墙）</p></em>
             </p>
-        3. Task: Allow connection
-            <p align="center">
+        3. 任务：允许连接
+<p align="center">
              <img src="../_assets/defender-setting-3.png"></img>
-             <em><p align="center">Figure 2.6 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.6 NTP 服务器设置（防火墙）</p></em>
             </p>
-        4. Profile: Domain, Personal, Public
+        4. 配置文件：域、个人、公用
             <p align="center">
              <img src="../_assets/defender-setting-4.png"></img>
-             <em><p align="center">Figure 2.7 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.7 NTP 服务器设置（防火墙）</p></em>
             </p>
-        5. Name: Write a name and description (optional)
+        5. 名称：输入名称和描述（可选）
             <p align="center">
              <img src="../_assets/defender-setting-5.png"></img>
-             <em><p align="center">Figure 2.8 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.8 NTP 服务器设置（防火墙）</p></em>
             </p>
-        6. Finish
-
+        6. 完成

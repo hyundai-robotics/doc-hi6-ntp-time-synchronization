@@ -1,28 +1,28 @@
-﻿# 3.1 Setting
+﻿# 3.1 设置
 
-1. Touch the menu \[system &gt; 2: Control parameters &gt; 9: Network &gt; 2: Service &gt; 3: NTP client\]
+1. 点击菜单 \[system &gt; 2: 控制参数 &gt; 9: 网络 &gt; 2: 服务 &gt; 3: NTP 客户端\]
 
-2. Sets each parameter required for NTP time synchronization.
+2. 设置 NTP 时间同步所需的每个参数。
 
-3. You can perform NTP time synchronization by touching the 'Execute now' button.
+3. 您可以通过点击“立即执行”按钮来执行 NTP 时间同步。
 
-* Whether to use NTP client : 'Disable'
+* 是否使用 NTP 客户端 : '禁用'
 <p align="center">
  <img src="../_assets/ntp-client-disable.png"></img>
- <em><p align="center">Figure 3.1 NTP Client Screen(Disable)</p></em>
+ <em><p align="center">图 3.1 NTP 客户端屏幕(禁用)</p></em>
 </p>
 
-* Whether to use NTP client : 'Enable'
+* 是否使用 NTP 客户端 : '启用'
 <p align="center">
  <img src="../_assets/ntp-client-enable.png"></img>
- <em><p align="center">Figure 3.2 NTP Client Screen(Enable)</p></em>
+ <em><p align="center">图 3.2 NTP 客户端屏幕(启用)</p></em>
 </p>
 
 <table>
  <thead>
   <tr>
-   <th style="text-align:left">Number</th>
-   <th stype="text-align:left">Description</th>
+   <th style="text-align:left">编号</th>
+   <th stype="text-align:left">描述</th>
   </tr>
  </thead>
  <tbody>
@@ -31,7 +31,7 @@
     <img src="../_assets/n1.png" alt/>
    </td>
    <td style="text-align:left">
-    This screen is displayed when 'Disable' is selected as whether to use the NTP client.
+    当选择“禁用”作为是否使用 NTP 客户端时，显示此屏幕。
    </td>
   </tr>
   <tr>
@@ -39,7 +39,7 @@
     <img src="../_assets/n2.png" alt/>
    </td>
    <td style="text-align:left">
-    This screen is displayed when 'Enable' is selected as whether to use the NTP client.
+    当选择“启用”作为是否使用 NTP 客户端时，显示此屏幕。
    </td>
   </tr>
   <tr>
@@ -47,12 +47,12 @@
     <img src="../_assets/n3.png" alt/>
    </td>
    <td style="text-align:left">
-    Set values for NTP time synchronization.
-     <li><b>NTP server IP Address : </b>Enter the IP address(IPv4) of the NTP server.</li>
-     <li><b>NTP port number : </b>Enter the port number to be used by NTP. NTP uses port 123 as the standard port.</li>
-     <li><b>Timezone offset : </b>Enter the time zone offset for the current location.</li>
-     <li><b>Update interval : </b>Enter the update interval in hours for periodic time synchronization. If you do not want to perform periodic time synchronization, enter 0.</li>
-     <li><b>Remaining time : </b>Shows the time remaining in seconds until the next time synchronization.</li>
+    设置 NTP 时间同步的值。
+<li><b>NTP 服务器 IP 地址 : </b>输入 NTP 服务器的 IP 地址（IPv4）。</li>
+<li><b>NTP 端口号 : </b>输入 NTP 使用的端口号。NTP 使用端口 123 作为标准端口。</li>
+<li><b>时区偏移 : </b>输入当前地点的时区偏移。</li>
+<li><b>更新时间间隔 : </b>输入定期时间同步的更新时间间隔（以小时为单位）。如果您不想执行定期时间同步，请输入 0。</li>
+<li><b>剩余时间 : </b>显示下次时间同步前剩余的时间（以秒为单位）。</li>
    </td>
   </tr>
   <tr>
@@ -60,7 +60,7 @@
     <img src="../_assets/n4.png" alt/>
    </td>
    <td style="text-align:left">
-    Execute NTP time synchronization
+    执行 NTP 时间同步
    </td>
   </tr>
   <tr>
@@ -68,9 +68,8 @@
     <img src="../_assets/n5.png" alt/>
    </td>
    <td style="text-align:left">
-    Save settings. To apply the changed settings for NTP time synchronization, touch the 'Execute now' button.
+    保存设置。要应用更改的 NTP 时间同步设置，请触摸“立即执行”按钮。
    </td>
   </tr>
  </tbody>
 </table>
-

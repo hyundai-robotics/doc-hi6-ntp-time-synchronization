@@ -1,13 +1,12 @@
-﻿# 1.1 What is NTP time synchronization?
+﻿# 1.1 什么是NTP时间同步？
 
-NTP(Network Time Protocol) is a protocol used to synchronize time across all devices in the network. By default, UDP port 123 is used.
+NTP（网络时间协议）是一种用于同步网络中所有设备时间的协议。默认情况下，使用UDP端口123。
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">Figure 1.1 NTP time synchronization on ${cont_model} robot controller</p></em>
+ <em><p align="center">图1.1 ${cont_model}机器人控制器上的NTP时间同步</p></em>
 </p>
 
 ---
 
-The definition of NTP can be found in [RFC 5905: Network Time Protocol Version 4: Protocol and Algorithm Specification](https://datatracker.ietf.org/doc/html/rfc5905).
-
+NTP的定义可以在 [RFC 5905: 网络时间协议第4版：协议和算法规范](https://datatracker.ietf.org/doc/html/rfc5905) 中找到。
