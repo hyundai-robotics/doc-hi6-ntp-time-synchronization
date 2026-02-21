@@ -1,7 +1,7 @@
 ﻿# Table of contents
 
-          * [${cont_model} 控制器功能手册 - NTP 客户端时间同步](README.md)
-          * [注意事项](0-about-this-manual/precautions.md)
+* [${cont_model} 控制器功能手册 - NTP 客户端时间同步](README.md)
+* [注意事项](0-about-this-manual/precautions.md)
 * [1. 概述](1-overview/README.md)
   * [1.1 什么是NTP时间同步？](1-overview/1-description.md)
   * [1.2 需求](1-overview/2-requirement.md)
