@@ -121,7 +121,7 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
 [__SOURCE](3-use-ntp-client/1-setting.md)
 # 3.1 Setting
 
-1. Touch the menu \[system &gt; 2: Control parameters &gt; 9: Network &gt; 2: Service &gt; 3: NTP client\]
+1. Touch the menu `[F2: system] - 2: Control parameters - 9: Network - 2: Service - 3: NTP client`
 
 2. Sets each parameter required for NTP time synchronization.
 
