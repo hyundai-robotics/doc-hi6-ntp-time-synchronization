@@ -5,14 +5,14 @@ To use a Windows PC(Windows 10) as an NTP server, you must follow the steps belo
 1. Enable NTP server feature in Windows.
     * Use w32time(Windows Time Service)
     1. Open 'Registry Editor'
-    2. Go to the path 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config'
-        * Set the value of the 'AnnounceFlags' entry to 5(NTP server) - default may be 10
+    2. Go to the path 'HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time'
+        * In 'Config', set the value of the 'AnnounceFlags' entry to 5(NTP server) - default may be 10
         <p align="center">
          <img src="../_assets/reg-announceflags.png"></img>
          <em><p align="center">Figure 2.1 NTP Server Setting(Registry Editor)</p></em>
         </p>
-    3. Go to the path 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer'
-        * Set the value of 'Enabled' entry to 1(enabled)
+
+        * In 'TimeProviders/NtpServer', set the value of 'Enabled' entry to 1(enabled)
         <p align="center">
          <img src="../_assets/reg-enabled.png"></img>
          <em><p align="center">Figure 2.2 NTP Server Setting(Registry Editor)</p></em>
