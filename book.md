@@ -5,7 +5,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # 사전 주의사항
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/ko/precautions.md" %}
+{% include file="ko/precautions.md" %}
 
 [__SOURCE](1-overview/README.md)
 # 1. 개요
@@ -52,14 +52,14 @@ ${cont_model} 로봇제어기에 연결하는 호스트 PC를 NTP 서버로 사�
 1. Windows에서 NTP 서버 기능 활성화
     * w32time(Windows Time Service) 사용
     1. '레지스트리 편집기' 열기
-    2. 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config' 경로로 이동
-        * 'AnnounceFlags' 항목의 값을 5(NTP 서버)로 설정 - 기본값은 10일 수 있음
+    2. 'HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time' 경로로 이동
+        * 'Config'에서 'AnnounceFlags' 항목의 값을 5(NTP 서버)로 설정 - 기본값은 10일 수 있음
         <p align="center">
          <img src="../_assets/reg-announceflags.png"></img>
          <em><p align="center">그림 2.1 NTP 서버 설정(레지스트리 편집기)</p></em>
         </p>
-    3. 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer' 경로로 이동
-        * 'Enabled' 항목의 값을 1(활성화)로 설정
+        
+        * 'TimeProviders/NtpServer'에서 'Enabled' 항목의 값을 1(활성화)로 설정
         <p align="center">
          <img src="../_assets/reg-enabled.png"></img>
          <em><p align="center">그림 2.2 NTP 서버 설정(레지스트리 편집기)</p></em>
