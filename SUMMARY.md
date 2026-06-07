@@ -1,7 +1,9 @@
 ﻿# Table of contents
 
 * [${cont_model} 제어기 기능설명서 - NTP 클라이언트 시간 동기화](README.md)
-* [사전 주의사항](0-about-this-manual/precautions.md)
+* [이 설명서에 대하여](0-about-this-manual/README.md)
+  * [사전 주의사항](0-about-this-manual/precautions.md)
+  * [안전 주의 사항](0-about-this-manual/safety-notice.md)
 * [1. 개요](1-overview/README.md)
     * [1.1 NTP 시간 동기화란?](1-overview/1-description.md)
     * [1.2 요구사항](1-overview/2-requirement.md)
