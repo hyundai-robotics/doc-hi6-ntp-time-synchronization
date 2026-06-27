@@ -1,157 +1,141 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} Controller Function Manual - NTP client time synchronization
-
+# ${cont_model} 控制器功能手册 - NTP 客户端时间同步
 [__SOURCE](0-about-this-manual/README.md)
-# About the Manual
-
+# 关于手册
 [__SOURCE](0-about-this-manual/precautions.md)
-# Precautions
+# 注意事项
 
-{% include file="en/precautions.md" %}
-
+{% include file="zh/precautions.md" %}
 [__SOURCE](0-about-this-manual/safety-notice.md)
-# Safety Cautions
+# 安全注意事项
 
-{% include file="en/safety-notice.md" %}
-
+{% include file="zh/safety-notice.md" %}
 [__SOURCE](1-overview/README.md)
-# 1. Overview
+# 1. 概述
 
 {% hint style="info" %}
-This feature is supported in V60.30-00 and later versions.
+此功能在 V60.30-00 及更高版本中受支持。
 {% endhint %}
-
-
 [__SOURCE](1-overview/1-description.md)
-# 1.1 What is NTP time synchronization?
+# 1.1 NTP时间同步是什么？
 
-NTP(Network Time Protocol) is a protocol used to synchronize time across all devices in the network. By default, UDP port 123 is used.
+NTP（网络时间协议）是一种用于在网络中的所有设备之间同步时间的协议。默认情况下，使用UDP端口123。
 
 <p align="center">
  <img src="../_assets/ntp-structure.png"></img>
- <em><p align="center">Figure 1.1 NTP time synchronization on ${cont_model} robot controller</p></em>
+ <em><p align="center">图1.1 ${cont_model}机器人控制器上的NTP时间同步</p></em>
 </p>
 
 ---
 
-The definition of NTP can be found in [RFC 5905: Network Time Protocol Version 4: Protocol and Algorithm Specification](https://datatracker.ietf.org/doc/html/rfc5905).
-
-
+NTP的定义可以在[RFC 5905：网络时间协议版本4：协议和算法规范](https://datatracker.ietf.org/doc/html/rfc5905)中找到。
 [__SOURCE](1-overview/2-requirement.md)
-# 1.2 Requirement
+# 1.2 需求
 
-To use the NTP client time synchronization feature, you need an NTP server that can be directly connected to the ${cont_model} robot controller by LAN.
+要使用 NTP 客户端时间同步功能，您需要一个可以通过 LAN 直接连接到 ${cont_model} 机器人控制器的 NTP 服务器。
 
-For information on how to use your host PC as an NTP server, see '[2.NTP server setting](../2-ntp-server-setting/README.md)' in the next chapter.
-
-
+有关如何使用您的主机 PC 作为 NTP 服务器的信息，请参见下一章中的 '[2.NTP 服务器设置](../2-ntp-server-setting/README.md)'。
 [__SOURCE](2-ntp-server-setting/README.md)
-# 2. NTP server setting
+# 2. NTP 服务器设置
 
-Describes how to use the host PC that connects to the ${cont_model} robot controller as an NTP server.
-
-
+描述了如何使用连接到 ${cont_model} 机器人控制器的主机 PC 作为 NTP 服务器。
 [__SOURCE](2-ntp-server-setting/1-window-pc.md)
-# 2.1 Set Windows PC as an NTP server
+# 2.1 设置 Windows PC 为 NTP 服务器
 
-To use a Windows PC(Windows 10) as an NTP server, you must follow the steps below.
+要将 Windows PC（Windows 10）用作 NTP 服务器，必须按照以下步骤操作。
 
-1. Enable NTP server feature in Windows.
-    * Use w32time(Windows Time Service)
-    1. Open 'Registry Editor'
-    2. Go to the path 'HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time'
-        * In 'Config', set the value of the 'AnnounceFlags' entry to 5(NTP server) - default may be 10
+1. 在 Windows 中启用 NTP 服务器功能。
+    * 使用 w32time（Windows 时间服务）
+    1. 打开“注册表编辑器”
+    2. 前往路径 'HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time'
+        * 在 'Config' 中，将 'AnnounceFlags' 条目的值设置为 5（NTP 服务器） - 默认值可能为 10
         <p align="center">
          <img src="../_assets/reg-announceflags.png"></img>
-         <em><p align="center">Figure 2.1 NTP Server Setting(Registry Editor)</p></em>
+         <em><p align="center">图 2.1 NTP 服务器设置（注册表编辑器）</p></em>
         </p>
 
-        * In 'TimeProviders/NtpServer', set the value of 'Enabled' entry to 1(enabled)
+        * 在 'TimeProviders/NtpServer' 中，将 'Enabled' 条目的值设置为 1（启用）
         <p align="center">
          <img src="../_assets/reg-enabled.png"></img>
-         <em><p align="center">Figure 2.2 NTP Server Setting(Registry Editor)</p></em>
+         <em><p align="center">图 2.2 NTP 服务器设置（注册表编辑器）</p></em>
         </p>
-2. Restart the Windows Time service
-    * In 'Command Prompt', enter the following command with administrator privileges.
+2. 重新启动 Windows 时间服务
+    * 在“命令提示符”中，以管理员权限输入以下命令。
     ```
         net stop w32time
         net start w32time
     ```
-3. Windows Firewall setting
-    * NTP uses UDP port 123 by default. Therefore, the port must be open to act as an NTP server
-    1. Open 'Control Panel'
-    2. Select 'Windows Defender Firewall'
-    3. Select 'Advanced Settings'
-    4. Select 'Inbound Rules' in 'Windows Defender Firewall with Advanced Security'
+3. Windows 防火墙设置
+    * NTP 默认使用 UDP 端口 123。因此，必须打开该端口以作为 NTP 服务器
+    1. 打开“控制面板”
+    2. 选择“Windows 防火墙”
+    3. 选择“高级设置”
+    4. 在“具有高级安全性的 Windows 防火墙”中选择“入站规则”
         <p align="center">
          <img src="../_assets/defender.png"></img>
-         <em><p align="center">Figure 2.3 NTP Server Settings(Firewall)</p></em>
+         <em><p align="center">图 2.3 NTP 服务器设置（防火墙）</p></em>
         </p>
-    5. Select 'New Rule...'
-        * The 'New Inbound Rule Wizard' window opens
-        1. Rule Type: Port
+    5. 选择“新建规则...”
+        * “新建入站规则向导”窗口打开
+        1. 规则类型：端口
             <p align="center">
              <img src="../_assets/defender-setting-1.png"></img>
-             <em><p align="center">Figure 2.4 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.4 NTP 服务器设置（防火墙）</p></em>
             </p>
-        2. Protocol and Port
+        2. 协议和端口
             * UDP
-            * Specific local ports: 123
+            * 特定本地端口：123
             <p align="center">
              <img src="../_assets/defender-setting-2.png"></img>
-             <em><p align="center">Figure 2.5 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.5 NTP 服务器设置（防火墙）</p></em>
             </p>
-        3. Task: Allow connection
+        3. 任务：允许连接
             <p align="center">
              <img src="../_assets/defender-setting-3.png"></img>
-             <em><p align="center">Figure 2.6 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.6 NTP 服务器设置（防火墙）</p></em>
             </p>
-        4. Profile: Domain, Personal, Public
+        4. 配置文件：域、个人、公共
             <p align="center">
              <img src="../_assets/defender-setting-4.png"></img>
-             <em><p align="center">Figure 2.7 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.7 NTP 服务器设置（防火墙）</p></em>
             </p>
-        5. Name: Write a name and description (optional)
+        5. 名称：写一个名称和描述（可选）
             <p align="center">
              <img src="../_assets/defender-setting-5.png"></img>
-             <em><p align="center">Figure 2.8 NTP Server Settings(Firewall)</p></em>
+             <em><p align="center">图 2.8 NTP 服务器设置（防火墙）</p></em>
             </p>
-        6. Finish
-
-
+        6. 完成
 [__SOURCE](3-use-ntp-client/README.md)
-# 3. Execute NTP time synchronization
+# 3. 执行 NTP 时间同步
 
-Describes how to set up NTP time synchronization in the Teach Pendant and Execute now.
-
-
+描述如何在教学挂件中设置 NTP 时间同步并立即执行。
 [__SOURCE](3-use-ntp-client/1-setting.md)
-# 3.1 Setting
+# 3.1 设置
 
-1. Touch the menu `[F2: system] - 2: Control parameters - 9: Network - 2: Service - 3: NTP client`
+1. 触摸菜单 `[F2: 系统] - 2: 控制参数 - 9: 网络 - 2: 服务 - 3: NTP 客户端 ([F2: system] - 2: Control parameters - 9: Network - 2: Service - 3: NTP client)`
 
-2. Sets each parameter required for NTP time synchronization.
+2. 设置 NTP 时间同步所需的每个参数。
 
-3. You can perform NTP time synchronization by touching the 'Execute now' button.
+3. 您可以通过触摸“立即执行”按钮进行 NTP 时间同步。
 
-* Whether to use NTP client : 'Disable'
+* 是否使用 NTP 客户端 : '禁用'
 <p align="center">
  <img src="../_assets/ntp-client-disable.png"></img>
- <em><p align="center">Figure 3.1 NTP Client Screen(Disable)</p></em>
+ <em><p align="center">图 3.1 NTP 客户端屏幕（禁用）</p></em>
 </p>
 
-* Whether to use NTP client : 'Enable'
+* 是否使用 NTP 客户端 : '启用'
 <p align="center">
  <img src="../_assets/ntp-client-enable.png"></img>
- <em><p align="center">Figure 3.2 NTP Client Screen(Enable)</p></em>
+ <em><p align="center">图 3.2 NTP 客户端屏幕（启用）</p></em>
 </p>
 
 <table>
  <thead>
   <tr>
-   <th style="text-align:left">Number</th>
-   <th stype="text-align:left">Description</th>
+   <th style="text-align:left">编号</th>
+   <th stype="text-align:left">描述</th>
   </tr>
  </thead>
  <tbody>
@@ -160,7 +144,7 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
     <img src="../_assets/n1.png" alt/>
    </td>
    <td style="text-align:left">
-    This screen is displayed when 'Disable' is selected as whether to use the NTP client.
+    当选择“禁用”作为是否使用 NTP 客户端时，将显示此屏幕。
    </td>
   </tr>
   <tr>
@@ -168,7 +152,7 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
     <img src="../_assets/n2.png" alt/>
    </td>
    <td style="text-align:left">
-    This screen is displayed when 'Enable' is selected as whether to use the NTP client.
+    当选择“启用”作为是否使用 NTP 客户端时，将显示此屏幕。
    </td>
   </tr>
   <tr>
@@ -176,12 +160,12 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
     <img src="../_assets/n3.png" alt/>
    </td>
    <td style="text-align:left">
-    Set values for NTP time synchronization.
-     <li><b>NTP server IP Address : </b>Enter the IP address(IPv4) of the NTP server.</li>
-     <li><b>NTP port number : </b>Enter the port number to be used by NTP. NTP uses port 123 as the standard port.</li>
-     <li><b>Timezone offset : </b>Enter the time zone offset for the current location.</li>
-     <li><b>Update interval : </b>Enter the update interval in hours for periodic time synchronization. If you do not want to perform periodic time synchronization, enter 0.</li>
-     <li><b>Remaining time : </b>Shows the time remaining in seconds until the next time synchronization.</li>
+    设置 NTP 时间同步的值。
+     <li><b>NTP 服务器 IP 地址 : </b>输入 NTP 服务器的 IP 地址（IPv4）。</li>
+     <li><b>NTP 端口号 : </b>输入 NTP 使用的端口号。NTP 使用端口 123 作为标准端口。</li>
+     <li><b>时区偏移 : </b>输入当前地点的时区偏移。</li>
+     <li><b>更新时间间隔 : </b>输入定期时间同步的小时更新时间间隔。如果您不想进行定期时间同步，请输入 0。</li>
+     <li><b>剩余时间 : </b>显示到下次时间同步的剩余时间（以秒为单位）。</li>
    </td>
   </tr>
   <tr>
@@ -189,7 +173,7 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
     <img src="../_assets/n4.png" alt/>
    </td>
    <td style="text-align:left">
-    Execute NTP time synchronization
+    执行 NTP 时间同步
    </td>
   </tr>
   <tr>
@@ -197,42 +181,39 @@ Describes how to set up NTP time synchronization in the Teach Pendant and Execut
     <img src="../_assets/n5.png" alt/>
    </td>
    <td style="text-align:left">
-    Save settings. To apply the changed settings for NTP time synchronization, touch the 'Execute now' button.
+    保存设置。要应用更改的 NTP 时间同步设置，请触摸“立即执行”按钮。
    </td>
   </tr>
  </tbody>
 </table>
-
-
 [__SOURCE](3-use-ntp-client/2-execution.md)
-# 3.2 Execute now
+# 3.2 立即执行
 
-Touch the 'Execute now' button to perform NTP time synchronization.
+触摸“立即执行”按钮以执行 NTP 时间同步。
 
-If you use a port number other than 123 as the NTP port number, a message box as shown below will appear. Touch 'Enter' to perform NTP time synchronization to that port, otherwise touch 'Cancel'.
+如果您使用端口号 123 以外的其他端口号作为 NTP 端口号，将出现如下所示的消息框。触摸“输入”以对该端口执行 NTP 时间同步，否则触摸“取消”。
 
 <p align="center">
  <img src="../_assets/ntp-change-port-no.png"></img>
- <em><p align="center">Figure 3.3 Use a value other than 123 as the NTP port number</p></em>
+ <em><p align="center">图 3.3 使用除 123 以外的值作为 NTP 端口号</p></em>
 </p>
 
-Depending on the results of executing NTP time synchronization, a message box as shown below will appear.
+根据执行 NTP 时间同步的结果，将出现如下所示的消息框。
 
 <p align="center">
  <img src="../_assets/ntp-complete.png"></img>
- <em><p align="center">Figure 3.4 Results of NTP Time Synchronization(Success)</p></em>
+ <em><p align="center">图 3.4 NTP 时间同步的结果（成功）</p></em>
 </p>
 
-NTP time synchronization was performed successfully.
+NTP 时间同步成功完成。
 
 <p align="center">
  <img src="../_assets/ntp-fail.png"></img>
- <em><p align="center">Figure 3.5 Results of NTP Time Synchronization(Fail)</p></em>
+ <em><p align="center">图 3.5 NTP 时间同步的结果（失败）</p></em>
 </p>
 
-NTP time synchronization failed.
+NTP 时间同步失败。
 
 {% hint style="info" %}
-* Be careful not to enter a port number that is in use elsewhere as the NTP port number. We recommend using NTP standard port 123.
+* 请小心不要输入在其他地方正在使用的端口号作为 NTP 端口号。我们建议使用 NTP 标准端口 123。
 {% endhint %}
-

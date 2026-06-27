@@ -1,31 +1,30 @@
-﻿# 3.2 Execute now
+﻿# 3.2 立即执行
 
-Touch the 'Execute now' button to perform NTP time synchronization.
+触摸“立即执行”按钮以执行 NTP 时间同步。
 
-If you use a port number other than 123 as the NTP port number, a message box as shown below will appear. Touch 'Enter' to perform NTP time synchronization to that port, otherwise touch 'Cancel'.
+如果您使用端口号 123 以外的其他端口号作为 NTP 端口号，将出现如下所示的消息框。触摸“输入”以对该端口执行 NTP 时间同步，否则触摸“取消”。
 
 <p align="center">
  <img src="../_assets/ntp-change-port-no.png"></img>
- <em><p align="center">Figure 3.3 Use a value other than 123 as the NTP port number</p></em>
+ <em><p align="center">图 3.3 使用除 123 以外的值作为 NTP 端口号</p></em>
 </p>
 
-Depending on the results of executing NTP time synchronization, a message box as shown below will appear.
+根据执行 NTP 时间同步的结果，将出现如下所示的消息框。
 
 <p align="center">
  <img src="../_assets/ntp-complete.png"></img>
- <em><p align="center">Figure 3.4 Results of NTP Time Synchronization(Success)</p></em>
+ <em><p align="center">图 3.4 NTP 时间同步的结果（成功）</p></em>
 </p>
 
-NTP time synchronization was performed successfully.
+NTP 时间同步成功完成。
 
 <p align="center">
  <img src="../_assets/ntp-fail.png"></img>
- <em><p align="center">Figure 3.5 Results of NTP Time Synchronization(Fail)</p></em>
+ <em><p align="center">图 3.5 NTP 时间同步的结果（失败）</p></em>
 </p>
 
-NTP time synchronization failed.
+NTP 时间同步失败。
 
 {% hint style="info" %}
-* Be careful not to enter a port number that is in use elsewhere as the NTP port number. We recommend using NTP standard port 123.
+* 请小心不要输入在其他地方正在使用的端口号作为 NTP 端口号。我们建议使用 NTP 标准端口 123。
 {% endhint %}
-

@@ -1,4 +1,3 @@
-﻿# 3. Execute NTP time synchronization
+﻿# 3. 执行 NTP 时间同步
 
-Describes how to set up NTP time synchronization in the Teach Pendant and Execute now.
-
+描述如何在教学挂件中设置 NTP 时间同步并立即执行。

@@ -1,6 +1,5 @@
-﻿# 1.2 Requirement
+﻿# 1.2 需求
 
-To use the NTP client time synchronization feature, you need an NTP server that can be directly connected to the ${cont_model} robot controller by LAN.
+要使用 NTP 客户端时间同步功能，您需要一个可以通过 LAN 直接连接到 ${cont_model} 机器人控制器的 NTP 服务器。
 
-For information on how to use your host PC as an NTP server, see '[2.NTP server setting](../2-ntp-server-setting/README.md)' in the next chapter.
-
+有关如何使用您的主机 PC 作为 NTP 服务器的信息，请参见下一章中的 '[2.NTP 服务器设置](../2-ntp-server-setting/README.md)'。
